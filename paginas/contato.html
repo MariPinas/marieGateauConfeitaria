@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF 8">
+    <title>Marie Gâteau - Confeitaria</title>
+    <link rel="shortcut icon" href="../imagens/logo/coxinhazinha.ico">
+    <meta name="author" content="Mariana Pereira Lima dos Santos">
+    <link rel="stylesheet" type="text/css" href="../estilos/formEstilo.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+</head>
+
+<body background="../imagens/background1.png">
+    <header>
+        <a href="../index.html" id="logo"><img src="../imagens/logoMarieGateau.png"
+                alt="Logo" id="logo" width="200px"><img src="../imagens/logoMarieGateauDarker.png" alt="Logo"
+                id="logo2"></a>
+
+        <nav class="dropdown">
+            <button class="dropbtn" href="../paginas/menu.html"><img
+                    src="../imagens/iconMenu.png" alt="MENU" id="iconMenu"></button>
+            <span class="dropdownConteudo">
+                <a href="../index.html">Home</a>
+                <a href="../paginas/menu.html">Nosso Menu</a>
+                <a href="../paginas/contato.html">Faça seu pedido aqui!</a>
+                <a href="../paginas/sobreNos.html">Sobre nós</a>
+            </span>
+        </nav>
+        <span class="pesquisarBox">
+            <input type="search" class="pesquisarTxt" placeholder="Buscar">
+            <a href="#" class="pesquisarBtn" target="_blank" hidden></a>
+            <img src="../imagens/lupa.png" alt="lupa" height="10" width="10" class="icon">
+            <span class="list"></span>
+        </span>
+
+    </header>
+    <h3 id="formato"> Nós produzimos os bolos mais deliciosos da cidade!</h3>
+    <main>
+
+        <form action="#" method="post" class="pedido">
+            <input placeholder="Nome Completo" type="text" required="" class="inputEselect" id="nome">
+            <input placeholder="CEP" type="zip" name="clienteCEP" class="inputEselect" id="cep">
+            <input placeholder="Rua" type="text" name="clienteRua" class="inputEselect" id="rua">
+            <input placeholder="Numero da residencia" type="number" name="clienteCasa" class="inputEselect" id="numRes">
+            <input placeholder="Complemento" type="text" name="clienteComplemento" class="inputEselect" id="comp">
+            <input placeholder="Telefone" type="tel" name="clienteTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="inputEselect" id="tel">
+
+            <select name="select" class="inputEselect" id="boloTipo">
+                <option value="escolha">Escolha seu bolo!</option>
+                <option value="Red Velvet">Red Velvet</option>
+                <option value="Dois amores">Dois amores</option>
+                <option value="Bolos de casamento">Bolos de casamento</option>
+                <option value="Dark Forest">Dark Forest</option>
+                <option value="Chocolate Belga">Chocolate Belga</option>
+              </select>
+            
+              <select name="select" class="inputEselect" id="pesoBolo">
+                <option value="Por Kg">Peso por Kg</option>
+                <option value="1 kg">1 kg (10 pessoas)</option>
+                <option value="1.5 kg">1,5 kg (15 pessoas)</option>
+                <option value="2 kg">2 kg (20 pessoas)</option>
+                <option value="4 kg">4 kg (40 pessoas)</option>
+                <option value="5 kg">5 kg (50 pessoas)</option>
+                <option value="6 kg">6 kg (60 pessoas)</option>
+                <option value="tamPerso">Tamanho Personalizado (contato pelo whatsapp)</option>
+              </select>
+
+            <button type="button" id="enviarBotao" onclick="cadastrar()">Fazer pedido</button>
+            <button type="reset" id="enviarBotao">Limpar</button>
+        </form>
+        <form action="#" class="dadosCad">
+            <!--DADOS INFORMADOS-->
+            <h2 style="margin: 1vw 0vw 1vw 0vw;">Dados Informados</h2>
+            Nome Completo: <label id="nomeCad" for="" class="labelDadosCad"></label>
+            <br>
+            CEP: <label id="cepCad" class="labelDadosCad"></label>
+            <br>
+            Rua: <label id="ruaCad" class="labelDadosCad"></label>
+            <br>
+            Numero da residencia: <label id="numResCad" class="labelDadosCad"></label>
+            <br>
+            Complemento: <label id="complementoCad" class="labelDadosCad"></label>
+            <br>
+            Telefone:<label id="telCad" class="labelDadosCad"></label>
+            <br>
+            Pedido: <span id="pedidoCad" class="labelDadosCad"></span>
+            <br>
+            Peso do seu bolo: <span id="pesoCad" class="labelDadosCad"></span>
+            <label id="documento"></label>
+        </form>
+    </main>
+    <footer>
+
+        <section id="footerSec1">
+            <ul>
+                <li>Contacte-nos em nossas redes sociais!
+                <li><a href="https://www.instagram.com/maripinas_/"><img
+                            src="../imagens/instagramLogo.png" alt="Instagram Logo"
+                            width="5%">Instagram</a></li>
+                <li><a href="https://github.com"><img src="../imagens/githubLogo.png" alt="Github Logo"
+                            width="5%">Github</a></li>
+            </ul>
+        </section>
+        <p>Copytrigth (C) 2023, Todos os direitos reservados.</p>
+        <section>
+            <address>
+                &#x1F370; Se encontrar qualquer bug, por favor <a href="mailto:lima.mariana1@aluno.ifsp.edu.br">contate
+                    o
+                    administrador do site</a>.&#x1F370;<br>
+                Você tambem pode querer nos visitar:<br>
+                Marie Gateau<br>
+                189 Centro<br>
+                Loja 2<br>
+                Boituva, centro 94043-0801<br>
+                BRA <br>
+            </address>
+        </section>
+    </footer>
+    <script src="../js/cadastrar.js"></script>
+</body>
+
+</html>

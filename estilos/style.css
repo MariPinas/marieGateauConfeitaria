@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    height: 120px;
+    width: 100%;
+    transition: .5s;
+    z-index: 100;
+    position: relative;
+}
+
+header:hover {
+    background-color: #ffc2ccb6;
+}
+
+header:hover #logo2 {
+    display: none;
+}
+
+header:hover #logo {
+    display: block;
+}
+
+#logo,
+#logo2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#logo2 {
+    z-index: 1;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 2vw;
+}
+
+/* DROPDOWN */
+#iconMenu {
+    width: 30px;
+    margin: auto;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+@media screen and (max-width: 765px){
+   .dropdown {
+    left: 25%;
+    transition: .5s4;
+   }
+    
+}
+.dropdown .dropdownConteudo {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 10px;
+    z-index: 1;
+}
+
+.dropdownConteudo a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdownConteudo a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown:hover .dropdownConteudo {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f86079;
+}
+
+/* FIM DROPDOWN */
+
+/*Barra de pesquisa*/
+.pesquisarBox {
+    position: relative;
+    background-color: #BFFFCB;
+    height: 40px;
+    padding: 5px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+.pesquisarTxt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pesquisarTxt::-webkit-input-placeholder {
+    color: #304033;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20%;
+    background-color: #BFFFCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    
+}
+
+.pesquisarBox:hover>.pesquisarTxt {
+    width: 240px;
+    padding: 0 2px;
+}
+
+@media screen and  (max-width: 767px) {
+    .pesquisarTxt {
+        max-width: 100px;
+    }
+}
+
+.pesquisarBox:hover>.pesquisarBtn {
+    background-color: pink;
+}
+
+/*FIM BARRA DE PESQUISA*/
+/* SLIDER COMECA AQUI*/
+.slider {
+    margin-top: -120px;
+    pointer-events: none;
+    width: 100%;
+    height: 54.2vw;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.slides {
+    position: absolute;
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.manualNavegacao {
+    position: absolute;
+    width: 50vw;
+    margin-left:25vw;
+    margin-top: 50vw;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+
+}
+
+.manualBtn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manualBtn:hover {
+    background-color: white;
+}
+
+#radio1:checked ~ .First {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .First {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .First {
+    margin-left: -50%;
+}
+
+.navegacaoAuto span{
+    border: 2px solid pink;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    pointer-events: auto; 
+}
+.navegacaoAuto{
+    position: absolute;
+    width: 50vw;
+    margin-left:25vw;
+    margin-top: 50vw;
+    display: flex;
+    justify-content: center;
+}
+.navegacaoAuto span:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navegacaoAuto .autoBtn1{
+    background-color: white;
+}
+#radio2:checked ~ .navegacaoAuto .autoBtn2{
+    background-color: white;
+}
+#radio3:checked ~ .navegacaoAuto .autoBtn3{
+    background-color: white;
+}
+
+/*SLIDER TERMINA AQUI*/
+
+
+.imgs {
+    width: 50%;
+}
+
+h2+legend {
+    font-size: 50%;
+}
+
+aside>h3 {
+    color: #69bd69;
+    font-size: 120%;
+}
+
+aside>ol {
+    margin-left: 20vw;
+    list-style: none;
+}
+
+aside ul li {
+    list-style: none;
+}
+
+.midias_sociais {
+    margin-top: 5vw;
+    margin-right: 2vw;
+    float: right;
+    font-style: italic;
+    text-align: center;
+    background-color: rgb(198, 243, 155);
+    padding: 2vw;
+    border-radius: 0.7vw;
+}
+
+.midias_sociais ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#sec2{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 50px;
+}
+@media screen and (max-width: 1100px) {
+    #sec2 {
+        flex-direction: column;
+    }
+    #sec2 article {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+#img1 {
+    width: 50%;
+    float: left;
+}
+
+#img2 {
+    float: left;
+    width: 30%;
+}
+#img1:hover~span{
+    width: 350px;
+    margin-right: 30px;
+    transition-duration: 0.5s;
+}
+#img2:hover~span{
+    width: 340px;
+    margin-right: 30px;
+    transition-duration: 1s;
+}
+#sec2 article{
+    color: rgb(255, 255, 255);
+    
+}
+
+#article1{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+}
+article span{
+    background-color: rgba(216, 112, 147, 0.24);
+    padding: 40px 40px 40px 40px;
+}
+#article2{
+    display: flex;
+    align-items: center;
+   
+}
+ 
+#sec3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c6f39b;
+    color: #91B372;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ultimoParagrafo{
+    color: #5D7349;
+}
+.sec1 {
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+    background-color: rgb(197, 230, 147);
+    font-size: 200%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+ #frete{
+    background-color: #f86079;
+    padding: 30px;
+    color: white;
+    width: 100%;
+ }
+ td{
+    text-align: center;
+ }
+  td:nth-child(2) {
+    border-left: 1px solid rgb(255, 255, 255);
+  }
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: pink;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+}
+footer section{
+    width: 35%;
+}
+footerSec1{
+    width: 10%;
+}
+footer p{
+    text-align: center;
+}
+address{
+    font-size:70%;
+    text-align: right;
+}
+
+footer section ul li a{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+ul li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+aside{
+    margin-top: 10px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    background-color: #f86079af;
+    z-index: 2;
+}
+
+button {
+    padding: 5px;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #logo {
+        height: 100px;
+        top: 5px;
+        display: block;
+    }
+
+    #logo2 {
+        height: 100px;
+        top: 5px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #logo {
+        display: block;
+        height: 100px;
+        top: 5px;
+    }
+
+    #logo2 {
+        display: block;
+        height: 100px;
+        top: 5px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #logo {
+        display: block;
+        height: 100px;
+        top: 5px;
+        
+    }
+
+    #logo2 {
+        display: block;
+        height: 100px;
+        top: 5px;
+        
+    }
+}
+
